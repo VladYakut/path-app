@@ -77,7 +77,11 @@ export const PathfindingGrid = () => {
       const key = `${pozX},${pozY}`;
       setDisabledCells((prev) => {
         const newSet = new Set(prev);
-        if (!newSet.has(key)) newSet.add(key);
+        if (newSet.has(key)) {
+          newSet.delete(key);
+        } else {
+          newSet.add(key);
+        }
         setToCalculatePathWith = newSet;
         return newSet;
       });
