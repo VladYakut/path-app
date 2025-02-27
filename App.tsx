@@ -1,12 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { Text, View } from "react-native";
 import "./global.css";
+import { PathfindingGrid } from "./app/components/Grid";
+import { SafeAreaView } from "react-native";
 
 export default function App() {
   return (
-    <View className="flex flex-1 align-center justify-center">
-      <Text>Open up App.tsx to start working on your app!</Text>
+    <SafeAreaView className="flex-1 bg-red-200">
       <StatusBar style="auto" />
-    </View>
+      <PathfindingGrid />
+    </SafeAreaView>
   );
 }
